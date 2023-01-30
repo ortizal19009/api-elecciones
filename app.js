@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require("cors");
-const DIRECTORIO_PERMITIDO_CORS = "http://localhost:4200";
+const DIRECTORIO_PERMITIDO_CORS = "http://localhost:3000";
 app.use(express.json());
 app.use(cors({
     origin: DIRECTORIO_PERMITIDO_CORS
