@@ -9,19 +9,21 @@ const getCanton = async (req, res) => {
   }
 };
 const getByIdProvincia = async (req, res) => {
-    const db = await conexionDb();
-    try {
-        const {idprovincia} = req.params;
-        const result = await db.query("SELECT * FROM  canton WHERE provincia_idprovincia = ?", idprovincia);
-        res.status(200).json(result);
-
-    } catch (error) {
-        res
-        .status(500)
-        .json({ error: `No hay datos que obtener con ese id: ${error}` });
-    }
+  const db = await conexionDb();
+  try {
+    const { idprovincia } = req.params;
+    const result = await db.query(
+      "SELECT * FROM  canton WHERE provincia_idprovincia = ?",
+      idprovincia
+    );
+    res.status(200).json(result);
+  } catch (error) {
+    res
+      .status(500)
+      .json({ error: `No hay datos que obtener con ese id: ${error}` });
+  }
 };
 module.exports = {
   getCanton,
-  getByIdProvincia
+  getByIdProvincia,
 };

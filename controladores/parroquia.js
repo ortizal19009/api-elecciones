@@ -13,7 +13,7 @@ const getByIdCanton = async (req, res) => {
   try {
     const { idcanton } = req.params;
     const result = await db.query(
-    "SELECT * FROM parroquia WHERE canton_idcanton = ?",
+      "SELECT * FROM parroquia WHERE canton_idcanton = ?",
       idcanton
     );
     res.status(200).json(result);
