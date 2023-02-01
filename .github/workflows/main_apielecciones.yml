@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'apielecciones'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_038B80C391AD46BD9AA8EBE57073A8FF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BE5F673BC6BC4045B5ACAC9E3033621A }}
           package: .
