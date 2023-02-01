@@ -5,10 +5,12 @@ const {
   getByIdMesa,
   getByGenero,
   getByRecinto,
+  addMesa
 } = require("../controladores/mesa");
 router.get("/", getMesas);
 router.get("/:id", getByIdMesa);
 router.get("/genero/:idgenero", getByGenero);
-router.get("/recinto/:idrecinto", getByRecinto);
+router.get("/recinto/:idr ecinto", getByRecinto);
+router.post("/", addMesa);
 
 module.exports = router;

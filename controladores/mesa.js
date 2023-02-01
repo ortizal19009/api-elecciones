@@ -35,6 +35,17 @@ const getByGenero = async (req, res) => {
       .json({ error: `No hay datos que obtener con ese id: ${err}` });
   }
 };
+const addMesa = async (req, res) => {
+  const db = await conexionDb();
+  try {
+    const mesa = req.body; 
+    const result = await db.query("INSER INTO mesa SET ?", mesa);
+    return res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({ error: `No se puede añadir esa junta : ${error}` });
+  }
+
+};
 const getByRecinto = async (req, res) => {
   const db = await conexionDb();
   try {
@@ -55,4 +66,5 @@ module.exports = {
   getByIdMesa,
   getByGenero,
   getByRecinto,
+  addMesa
 };
