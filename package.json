@@ -2,10 +2,10 @@
   "name": "elecciones2023",
   "version": "1.0.0",
   "description": "",
-  "main": "dis/app.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "node app.js",
-    "devstart": "nodemon app.js"
+    "start": "node index.js",
+    "devstart": "nodemon index.js"
   },
   "engines":{
     "node":"6.0.0"
