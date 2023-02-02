@@ -10,7 +10,7 @@ const {
 router.get("/", getMesas);
 router.get("/:id", getByIdMesa);
 router.get("/genero/:idgenero", getByGenero);
-router.get("/recinto/:idr ecinto", getByRecinto);
+router.get("/recinto/:idrecinto", getByRecinto);
 router.post("/", addMesa);
 
 module.exports = router;
